@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умови використання | BUTTERFLY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <h1 class="fw-bold">Умови використання</h1>
+      <p class="lead">Ознайомтесь з правилами користування сервісом BUTTERFLY</p>
+    </div>
+  </header>
+
+  <!-- Основний контент -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold">1. Загальні положення</h2>
+      <p>Ці Умови використання регулюють відносини між сервісом BUTTERFLY та користувачами.</p>
+
+      <h2 class="fw-bold mt-4">2. Використання сервісу</h2>
+      <ul>
+        <li>Користувач зобов’язується використовувати сервіс лише в законних цілях.</li>
+        <li>Адміністрація сервісу залишає за собою право змінювати умови без попереднього повідомлення.</li>
+      </ul>
+
+      <h2 class="fw-bold mt-4">3. Обмеження відповідальності</h2>
+      <p>Сервіс не несе відповідальності за рішення, прийняті користувачами на основі отриманих консультацій.</p>
+
+      <h2 class="fw-bold mt-4">4. Захист персональних даних</h2>
+      <p>Персональні дані користувачів обробляються згідно з нашою <a href="{{ url_for('privacy_policy') }}">Політикою конфіденційності</a>.</p>
+
+      <h2 class="fw-bold mt-4">5. Контакти</h2>
+      <p>Якщо у вас виникли питання, зв’яжіться з нами:</p>
+      <p><strong>Email:</strong> <a href="mailto:info@freedom.com">info@freedom.com</a></p>
+      <p><strong>Телефон:</strong> <a href="tel:+380961234567">+380 96 123 45 67</a></p>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 BUTTERFLY. Усі права захищені.</p>
+      <a href="{{ url_for('home') }}" class="text-light text-decoration-none">← На головну</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

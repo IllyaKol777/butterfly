@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}Адмінка{% endblock %}
+
+{% block content %}
+<section id="admin-dashboard" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Адмін-панель</h2>
+  
+      <!-- Повідомлення про дії -->
+      {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}" role="alert">
+          {{ message }}
+        </div>
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+  
+      <div class="row">
+        <!-- Блок психологів -->
+        <div class="col-lg-6">
+          <div class="card shadow p-4 mb-4">
+            <h3 class="fw-bold">Психологи</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ім'я</th>
+                  <th>Спеціальність</th>
+                  <th>Дії</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for psychologist in psychologists %}
+                <tr>
+                  <td>{{ psychologist['name'] }}</td>
+                  <td>{{ psychologist['specialty'] }}</td>
+                  <td>
+                    <a href="{{ url_for('edit_psychologist', id=psychologist['id']) }}" class="btn btn-sm btn-warning">Редагувати</a>
+                    <a href="{{ url_for('delete_psychologist', id=psychologist['id']) }}" class="btn btn-sm btn-danger">Видалити</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <a href="{{ url_for('add_psychologist') }}" class="btn btn-primary">Додати психолога</a>
+          </div>
+        </div>
+  
+        <!-- Блок публікацій -->
+        <div class="col-lg-6">
+          <div class="card shadow p-4 mb-4">
+            <h3 class="fw-bold">Публікації</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Назва</th>
+                  <th>Дії</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for publication in publications %}
+                <tr>
+                  <td>{{ publication['title'] }}</td>
+                  <td>
+                    <a href="{{ url_for('edit_publication', id=publication['id']) }}" class="btn btn-sm btn-warning">Редагувати</a>
+                    <a href="{{ url_for('delete_publication', id=publication['id']) }}" class="btn btn-sm btn-danger">Видалити</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <a href="{{ url_for('add_publication') }}" class="btn btn-primary">Додати публікацію</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Кнопка виходу -->
+      <div class="text-center mt-4">
+        <a href="{{ url_for('admin_logout') }}" class="btn btn-outline-danger">Вийти</a>
+      </div>
+    </div>
+</section>
+{% endblock %}

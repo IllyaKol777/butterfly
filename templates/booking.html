@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}Запис на консультацію{% endblock %}
+
+{% block content %}
+<section id="booking" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Записатися на консультацію</h2>
+      <p class="text-center text-secondary mb-5">Заповніть форму, щоб обрати психолога та зручний час.</p>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow p-4">
+            <!--<form action="{{ url_for('booking') }}" method="post">
+              
+              <div class="mb-3">
+                <label for="psychologist" class="form-label">Оберіть психолога</label>
+                <select id="psychologist" name="psychologist" class="form-select" required>
+                  <option selected disabled>Оберіть спеціаліста</option>
+                  {% for psychologist in psychologists %}
+                    <option value="{{ psychologist['id'] }}">{{ psychologist['name'] }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+  
+              
+              <div class="mb-3">
+                <label for="name" class="form-label">Ваше ім'я</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+              </div>
+  
+              
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Введіть ваш email" required>
+              </div>
+  
+              
+              <div class="mb-3">
+                <label for="date" class="form-label">Оберіть дату</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+              </div>
+  
+              
+              <div class="mb-3">
+                <label for="time" class="form-label">Оберіть час</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+              </div>
+  
+              
+              <div class="mb-3">
+                <label for="message" class="form-label">Коментар (необов’язково)</label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Додаткові деталі"></textarea>
+              </div>
+  
+              
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Записатися</button>
+              </div>
+            </form>-->
+            <form action="/send-form" method="POST">
+              <!-- Вибір психолога -->
+              <div class="mb-3">
+                <label for="psychologist" class="form-label">Оберіть психолога</label>
+                <select class="form-select" id="psychologist" name="psychologist" required>
+                  <option selected disabled>Оберіть спеціаліста</option>
+                  <option value="1">Василенко Тетяна - Практикуючий психолог</option>
+                  <option value="2">Гулей Тетяна - Сертифікований гештальт терапевт</option>
+                  <option value="3">Оксана Моргоч - Практичний психолог в гештальт підході</option>
+                  <option value="4">Віталія Калин - Арт, гештальт-терапевт</option>
+                  <option value="5">Глушко Олена - Психолог консультант</option>
+                  <option value="6">Кривонос Тетяна - Практикуючий психолог</option>
+                  <option value="7">Євгенія Овсюхно - Психолог в гештальт підході</option>
+                </select>
+              </div>
+            
+              <!-- Введення імені -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Ваше ім'я</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+              </div>
+            
+              <!-- Введення email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Ваш email" required>
+              </div>
+            
+              <!-- Вибір дати -->
+              <div class="mb-3">
+                <label for="date" class="form-label">Оберіть дату</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+              </div>
+            
+              <!-- Вибір часу -->
+              <div class="mb-3">
+                <label for="time" class="form-label">Оберіть час</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+              </div>
+            
+              <!-- Коментар -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Коментар (необов’язково)</label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Додаткові деталі"></textarea>
+              </div>
+            
+              <!-- Кнопка запису -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Записатися на консультацію</button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

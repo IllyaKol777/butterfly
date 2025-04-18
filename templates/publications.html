@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Публікації{% endblock %}
+
+{% block content %}
+<section id="publications" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Публікації</h2>
+      <p class="text-center text-secondary mb-5">Читайте цікаві статті від наших експертів</p>
+  
+      <div class="row">
+        {% for publication in publications %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="{{ url_for('publication_detail', id=publication['id']) }}" class="text-dark text-decoration-none">
+                  {{ publication['title'] }}
+                </a>
+              </h5>
+              <p class="card-text text-muted">{{ publication['content'][:100] }}...</p>
+              <a href="{{ url_for('publication_detail', id=publication['id']) }}" class="btn btn-primary">Читати далі</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

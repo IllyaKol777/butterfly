@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}Зворотній зв'язок{% endblock %}
+
+{% block content %}
+<section id="feedback" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Зворотній зв'язок</h2>
+      <p class="text-center text-secondary mb-5">Ми цінуємо вашу думку. Напишіть нам, і ми обов'язково відповімо!</p>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow p-4">
+            
+            <!-- Повідомлення про успішну або невдалу відправку -->
+            {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+              {% for category, message in messages %}
+              <div class="alert alert-{% if category == 'success' %}success{% else %}danger{% endif %}" role="alert">
+                {{ message }}
+              </div>
+              {% endfor %}
+            {% endif %}
+            {% endwith %}
+  
+            <form method="POST">
+              <!-- Поле для імені -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Ваше ім'я</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+              </div>
+  
+              <!-- Поле для email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Введіть ваш email" required>
+              </div>
+  
+              <!-- Поле для повідомлення -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Повідомлення</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Напишіть ваш запит" required></textarea>
+              </div>
+  
+              <!-- Кнопка відправки -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Надіслати</button>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Кнопка повернення на головну -->
+          <div class="text-center mt-4">
+            <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">На головну</a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

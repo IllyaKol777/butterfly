@@ -1,0 +1,498 @@
+{% extends "layout.html" %}
+
+{% block title %}Головна сторінка{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start mb-5">
+                    <h1>Доступна психологічна допомога та онлайн-консультації</h1>
+                    <p class="lead">Знайдіть свого психолога та почніть шлях до внутрішньої гармонії вже сьогодні.</p>
+                    <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg">Записатися на консультацію</a>
+                    <p class="mt-3 text-warning fw-bold" style="font-size:24px;">Обирайте психолога та ставайте кращими!</p>
+                </div>
+                <div class="col-lg-5 mb-5">
+                    <img src="{{ url_for('static', filename='img/psyhology.webp') }}" alt="Ілюстрація консультації" class="illustration">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12">
+              <h2 class="fw-bold text-center">Про нас</h2>
+              <p class="lead text-secondary">
+                <strong>BUTTERFLY</strong> - твій простір. Ми раді вітати тебе і готові бути поруч на шляху змін. 
+                Наша ідея створити для тебе  безпечний простір де ти відчуватимеш себе почутим і отримаєш прийняття і  розуміння. У нас зростають і трансформуються в екологічних умовах. Адже кожен може літати !
+                Просто часом потрібно тепле місце де можна набратися сил і віри в себе, щоб ризикнути розпочати  свій власний політ.
+                Можливо потрібен час і турбота в трансформації від кокона до метелика який самостійно розправить свої прекрасні крила і знайде свій власний політ з опорою на себе і свої орієнтири . 
+                Ми команда практичних практичних психологів, які готові ділитися навичками і досвідом як професіонали та люди які пройшли і проходимо власні трансформації в цьому житті. 
+                Тут можна бути собою. Без засудження. Кожна людина є цінність, яка має право на помилки, свій темп зростання, безліч спроб, і це все,  щоб почувати себе цілісною і опиратися на себе, довіряти своїм крилам і своїм почуттям. 
+                Запрошуємо тебе в твою унікальну подорож дослідження . У тебе вийде віднайти свої бажання  і потреби. А ми будемо поруч поки ти розправляєш свої крила. 
+                З великою та щирою вірою в тебе.
+                Лети...
+              </p>
+              <p>
+                Ми працюємо в гештальт підході .
+                Що то таке? І з чим його їдять?
+                Давай уявимо ти за кемом автомобіля і правила руху  тобі підказують знаки, швидкість і кількість  палива прибори на панелі управління. Навігація приклад шлях руху до точки яку ти сам вибрав. 
+                Якщо про тебе то ти рухаєшся своїм життям також по знакам . Почуття і відчуття тіла вказують тобі про твої потреби на цей момент і власне опираючись на них як на сигнали ти розумієш себе куди тобі і за чим. Досвід попередній і навички як інструменти в досягненні цілі. 
+                Отже відчувати і розрізняти свої почуття є важливим елементом руху в житті. Почувати себе живим.
+                Тіло , емоції і розум коли вони співналаштовані ти знаходишся в гармонійному стані. Чуєш себе і робиш вибір.
+                Але часом з попереднього досвіду бувають заблоковані почуття і не має зв'язку з тілом. І тоді ти не знаєш куди тобі і з ким. 
+                Правила і патерни поведінки які ми вважаємо своїми були вплетені нам від батьків, соціуму тощо. І це не завжди про норму. 
+                Ми перестаємо чути себе , бачити і відчувати .І втрачаємо свої орієнтири, тоді рух йде по накатаному сценарію як потрібно, так всі мої жили. Нажаль тоді це не про твій шлях і темп руху. 
+                Разом ми подосліджуємо патерни поведінки, віднайдемо твою чуттєвість , щоб ти опирався на себе і  був навігацією  і опорою для себе. 
+                Ну що гайда за кермо?
+              </p>
+              <ul class="list-unstyled">
+                <li>✔️ Велика база перевірених спеціалістів</li>
+                <li>✔️ Індивідуальний підхід до кожного</li>
+                <li>✔️ Конфіденційність та безпека</li>
+                <li>✔️ Онлайн-консультації у зручний для вас час</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-4">Як це працює?</h2>
+          <p class="text-center text-secondary mb-5">Простий процес у три кроки, щоб отримати допомогу від кваліфікованого психолога.</p>
+      
+          <div class="row text-center">
+            
+            <div class="col-md-4">
+              <div class="card border-0 shadow p-4">
+                <div class="circle-icon bg-primary text-white mb-3">
+                  <h3>1</h3>
+                </div>
+                <h4>Запис на консультацію</h4>
+                <p>Натисніть кнопку <strong>«Записатися на консультацію»</strong> та перейдіть на сторінку форми.</p>
+              </div>
+            </div>
+      
+            
+            <div class="col-md-4">
+              <div class="card border-0 shadow p-4">
+                <div class="circle-icon bg-primary text-white mb-3">
+                  <h3>2</h3>
+                </div>
+                <h4>Заповнення форми</h4>
+                <p>Введіть ваші дані, опишіть проблему та виберіть бажаний формат консультації.</p>
+              </div>
+            </div>
+      
+            
+            <div class="col-md-4">
+              <div class="card border-0 shadow p-4">
+                <div class="circle-icon bg-primary text-white mb-3">
+                  <h3>3</h3>
+                </div>
+                <h4>Очікування відповіді</h4>
+                <p>Психолог ознайомиться з вашою заявкою та зв’яжеться з вами для уточнення деталей.</p>
+              </div>
+            </div>
+          </div>
+      
+          
+          <div class="text-center mt-5">
+            <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg">Записатися на консультацію</a>
+          </div>
+        </div>
+    </section>
+    
+    <section id="psychologists" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-4">Наші психологи</h2>
+          <p class="text-center text-secondary mb-5">Оберіть спеціаліста, який вам підходить, і запишіться на консультацію.</p>
+      
+          <div class="row">
+            <!-- Психолог 1 -->
+            <div class="col-md-4">
+              <div class="card shadow text-center p-3">
+                <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/1.jpg') }}" alt="Ім'я психолога" class="img-fluid mx-auto rounded-circle" width="120">
+                <h4 class="mt-3">Василенко Тетяна</h4>
+                <p class="text-secondary">Практикуючий психолог</p>
+                <p>⭐ 5.0 (135 відгуків)</p>
+                <a href="#consultation" class="btn btn-primary">Записатися</a>
+              </div>
+            </div>
+      
+            <!-- Психолог 2 -->
+            <div class="col-md-4">
+              <div class="card shadow text-center p-3">
+                <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/2.jpg') }}" alt="Ім'я психолога" class="img-fluid mx-auto rounded-circle" width="120">
+                <h4 class="mt-3">Гулей Тетяна</h4>
+                <p class="text-secondary">Сертифікований гештальт терапевт</p>
+                <p>⭐ 5.0 (135 відгуків)</p>
+                <a href="#consultation" class="btn btn-primary">Записатися</a>
+              </div>
+            </div>
+      
+            <!-- Психолог 3 -->
+            <div class="col-md-4">
+              <div class="card shadow text-center p-3">
+                <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/3.jpg') }}" alt="Ім'я психолога" class="img-fluid mx-auto rounded-circle" width="120">
+                <h4 class="mt-3">Оксана Моргоч</h4>
+                <p class="text-secondary">Практичний психолог в гештальт підході</p>
+                <p>⭐ 5.0 (135 відгуків)</p>
+                <a href="#consultation" class="btn btn-primary">Записатися</a>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <!-- Психолог 4 -->
+            <div class="col-md-4">
+                <div class="card shadow text-center p-3">
+                  <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/4.jpg') }}" alt="Ім'я психолога" class="img-fluid mx-auto rounded-circle" width="120">
+                  <h4 class="mt-3">Віталія Калин</h4>
+                  <p class="text-secondary">Арт, гештальт-терапевт</p>
+                  <p>⭐ 5.0 (135 відгуків)</p>
+                  <a href="#consultation" class="btn btn-primary">Записатися</a>
+                </div>
+              </div>
+            <!-- Психолог 5 -->
+            <div class="col-md-4">
+                <div class="card shadow text-center p-3">
+                  <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/5.jpg') }}" alt="Ім'я психолога" class="img-fluid  mx-auto rounded-circle" width="120">
+                  <h4 class="mt-3">Глушко Олена</h4>
+                  <p class="text-secondary">Психолог консультант</p>
+                  <p>⭐ 5.0 (135 відгуків)</p>
+                  <a href="#consultation" class="btn btn-primary">Записатися</a>
+                </div>
+              </div>
+            <!-- Психолог 6 -->
+            <div class="col-md-4">
+              <div class="card shadow text-center p-3">
+                <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/6.jpg') }}" alt="Ім'я психолога" class="img-fluid  mx-auto rounded-circle" width="120">
+                <h4 class="mt-3">Кривонос Тетяна</h4>
+                <p class="text-secondary">Практикуючий психолог</p>
+                <p>⭐ 5.0 (135 відгуків)</p>
+                <a href="#consultation" class="btn btn-primary">Записатися</a>
+              </div>
+            </div>
+            <!-- Психолог 7 -->
+            <div class="col-md-4">
+              <div class="card shadow text-center p-3">
+                <img style="height: 170px; width: 150px;" src="{{ url_for('static', filename='img/7.jpg') }}" alt="Ім'я психолога" class="img-fluid  mx-auto rounded-circle" width="120">
+                <h4 class="mt-3">Євгенія Овсюхно</h4>
+                <p class="text-secondary">Психолог в гештальт підході</p>
+                <p>⭐ 5.0 (135 відгуків)</p>
+                <a href="#consultation" class="btn btn-primary">Записатися</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Відгуки клієнтів</h2>
+        <p class="text-center text-secondary mb-5">Дізнайтеся, що говорять наші клієнти про роботу з психологами.</p>
+    
+        <div class="row">
+          <!-- Відгук 1 -->
+          <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+              <img src="{{ url_for('static', filename='img/psyhology.webp') }}" alt="Клієнт" class="rounded-circle mx-auto mb-3" width="80">
+              <p class="fw-bold">Олена М.</p>
+              <p class="text-secondary">⭐ 5.0</p>
+              <p>«Дуже вдячна за підтримку. Психолог допоміг мені впоратися з тривожністю. Рекомендую!»</p>
+            </div>
+          </div>
+    
+          <!-- Відгук 2 -->
+          <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+              <img src="{{ url_for('static', filename='img/psyhology.webp') }}" alt="Клієнт" class="rounded-circle mx-auto mb-3" width="80">
+              <p class="fw-bold">Андрій В.</p>
+              <p class="text-secondary">⭐ 4.8</p>
+              <p>«Професійний підхід, комфортна атмосфера, відчувається реальна допомога. Дякую!»</p>
+            </div>
+          </div>
+    
+          <!-- Відгук 3 -->
+          <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+              <img src="{{ url_for('static', filename='img/psyhology.webp') }}" alt="Клієнт" class="rounded-circle mx-auto mb-3" width="80">
+              <p class="fw-bold">Марина К.</p>
+              <p class="text-secondary">⭐ 4.9</p>
+              <p>«Отримала якісну консультацію, тепер набагато легше приймати рішення. Дякую за сервіс!»</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consultation" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Запис на консультацію</h2>
+        <p class="text-center text-secondary mb-5">Заповніть форму, щоб обрати психолога та зручний час для консультації.</p>
+    
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow p-4">
+              <form action="/send-form" method="POST">
+                <!-- Вибір психолога -->
+                <div class="mb-3">
+                  <label for="psychologist" class="form-label">Оберіть психолога</label>
+                  <select class="form-select" id="psychologist" name="psychologist" required>
+                    <option selected disabled>Оберіть спеціаліста</option>
+                    <option value="1">Василенко Тетяна - Практикуючий психолог</option>
+                    <option value="2">Гулей Тетяна - Сертифікований гештальт терапевт</option>
+                    <option value="3">Оксана Моргоч - Практичний психолог в гештальт підході</option>
+                    <option value="4">Віталія Калин - Арт, гештальт-терапевт</option>
+                    <option value="5">Глушко Олена - Психолог консультант</option>
+                    <option value="6">Кривонос Тетяна - Практикуючий психолог</option>
+                    <option value="7">Євгенія Овсюхно - Психолог в гештальт підході</option>
+                  </select>
+                </div>
+              
+                <!-- Введення імені -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Ваше ім'я</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+                </div>
+              
+                <!-- Введення email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Ваш email" required>
+                </div>
+              
+                <!-- Вибір дати -->
+                <div class="mb-3">
+                  <label for="date" class="form-label">Оберіть дату</label>
+                  <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+              
+                <!-- Вибір часу -->
+                <div class="mb-3">
+                  <label for="time" class="form-label">Оберіть час</label>
+                  <input type="time" class="form-control" id="time" name="time" required>
+                </div>
+              
+                <!-- Коментар -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Коментар (необов’язково)</label>
+                  <textarea class="form-control" id="message" name="message" rows="3" placeholder="Додаткові деталі"></textarea>
+                </div>
+              
+                <!-- Кнопка запису -->
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">Записатися на консультацію</button>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Часто задавані питання</h2>
+        <p class="text-center text-secondary mb-5">Відповіді на найбільш поширені питання щодо використання сервісу.</p>
+    
+        <div class="accordion" id="faqAccordion">
+          <!-- Питання 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Як працює сервіс підбору психологів?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ви обираєте психолога, заповнюєте форму запису, а спеціаліст зв’язується з вами для уточнення деталей та проведення консультації.
+              </div>
+            </div>
+          </div>
+    
+          <!-- Питання 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Які формати консультацій доступні?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ви можете обрати онлайн-консультацію через відеозв’язок або офлайн-зустріч у кабінеті спеціаліста.
+              </div>
+            </div>
+          </div>
+    
+          <!-- Питання 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Скільки коштує консультація?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Вартість консультації залежить від спеціаліста та тривалості сесії. Актуальні ціни можна переглянути у профілі психолога.
+              </div>
+            </div>
+          </div>
+    
+          <!-- Питання 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Як оплатити консультацію?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Оплата здійснюється напряму психологу через зручні для вас методи (банківський переказ, онлайн-оплата тощо).
+              </div>
+            </div>
+          </div>
+    
+          <!-- Питання 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Чи конфіденційні мої дані?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Так, ми гарантуємо повну конфіденційність усіх ваших даних та розмов із психологами.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Ціни та пакети</h2>
+        <p class="text-center text-secondary mb-5">Оберіть зручний тариф для себе або скористайтеся спеціальними пропозиціями.</p>
+    
+        <div class="row">
+          <!-- Базовий пакет -->
+          <div class="col-md-4">
+            <div class="card shadow text-center p-4">
+              <h4 class="fw-bold">Базовий</h4>
+              <p class="text-secondary">Одноразова консультація</p>
+              <h3 class="fw-bold">1000 грн</h3>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ 1 онлайн-консультація</li>
+                <li>✔️ Тривалість 50 хв</li>
+                <li>✔️ Підтримка після сесії</li>
+              </ul>
+              <a href="#consultation" class="btn btn-primary mt-3">Обрати пакет</a>
+            </div>
+          </div>
+    
+          <!-- Стандартний пакет -->
+          <div class="col-md-4">
+            <div class="card shadow text-center p-4 border-primary">
+              <h4 class="fw-bold text-primary">Стандарт</h4>
+              <p class="text-secondary">Оптимальний вибір</p>
+              <h3 class="fw-bold">3000 грн</h3>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ 3 онлайн-консультації</li>
+                <li>✔️ Тривалість 50 хв кожна</li>
+                <li>✔️ Персональні рекомендації</li>
+              </ul>
+              <a href="#consultation" class="btn btn-primary mt-3">Обрати пакет</a>
+            </div>
+          </div>
+    
+          <!-- Преміум пакет -->
+          <div class="col-md-4">
+            <div class="card shadow text-center p-4">
+              <h4 class="fw-bold">Преміум</h4>
+              <p class="text-secondary">Максимальна підтримка</p>
+              <h3 class="fw-bold">6000 грн</h3>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ 6 онлайн-консультацій</li>
+                <li>✔️ Тривалість 50 хв кожна</li>
+                <li>✔️ Цілодобова підтримка</li>
+              </ul>
+              <a href="#consultation" class="btn btn-primary mt-3">Обрати пакет</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Знижки -->
+        <!--
+        <div class="text-center mt-5">
+          <h4 class="fw-bold text-success">Спеціальні пропозиції</h4>
+          <p class="text-secondary">При першому записі – знижка 10%!<br>Студентам – знижка 15% за наявності студентського квитка.</p>
+        </div>
+      </div>
+    </section>-->
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Контакти</h2>
+        <p class="text-center text-secondary mb-5">Зв’яжіться з нами, якщо у вас є питання або ви хочете залишити відгук.</p>
+    
+        <div class="row">
+          <!-- Контактна інформація -->
+          <div class="col-lg-5">
+            <div class="card shadow p-4">
+              <h4 class="fw-bold">Наші контакти</h4>
+              <p><strong>Адреса:</strong> вул. Головна, 123, Київ, Україна</p>
+              <p><strong>Телефон:</strong> <a href="tel:+380951414495" class="text-decoration-none">+380 95 141 44 95</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@freedom.com" class="text-decoration-none">info@freedom.com</a></p>
+              <p><strong>Графік роботи:</strong><br>Пн-Пт: 09:00 - 18:00<br>Сб-Нд: вихідний</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-primary me-2"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="#" class="btn btn-danger me-2"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="#" class="btn btn-info"><i class="bi bi-telegram"></i> Telegram</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Форма для зв’язку -->
+          <div class="col-lg-7">
+            <div class="card shadow p-4">
+              <h4 class="fw-bold">Напишіть нам</h4>
+              <form action="/contact"  method="POST">
+                <!-- Поле для імені -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Ваше ім'я</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+                </div>
+    
+                <!-- Поле для email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Введіть ваш email" required>
+                </div>
+    
+                <!-- Поле для повідомлення -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Повідомлення</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="Напишіть ваш запит" required></textarea>
+                </div>
+    
+                <!-- Кнопка відправки -->
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">Надіслати</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+      
+      
+{% endblock %}

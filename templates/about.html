@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Про нас</h2>
+    <p class="text-center text-secondary mb-5">
+      Ми створили BUTTERFLY, щоб допомогти вам знайти кваліфікованого психолога для комфортної та ефективної консультації.
+    </p>
+
+    <div class="row align-items-center">
+      <!-- Текстовий блок -->
+      <div class="col-lg-6">
+        <h3 class="fw-bold">Наша місія</h3>
+        <p>
+          Ми віримо, що психологічна підтримка має бути доступною кожному. BUTTERFLY допомагає знайти професійного спеціаліста,
+          який допоможе вам подолати труднощі та знайти внутрішню рівновагу.
+        </p>
+
+        <h3 class="fw-bold mt-4">Чому обирають нас?</h3>
+        <ul class="list-unstyled">
+          <li>✔️ Велика база перевірених психологів</li>
+          <li>✔️ Індивідуальний підхід до кожного клієнта</li>
+          <li>✔️ Конфіденційність і безпека</li>
+          <li>✔️ Онлайн-формат або особисті консультації</li>
+        </ul>
+      </div>
+
+      <!-- Зображення -->
+      <div class="col-lg-6 text-center">
+        <img src="{{ url_for('static', filename='img/psyhology.webp') }}" alt="Про нас" class="img-fluid rounded shadow illustration">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блок команди -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Наша команда</h2>
+    <p class="text-center text-secondary mb-5">Досвідчені спеціалісти, які готові допомогти вам.</p>
+
+    <div class="row">
+      <!-- Спеціаліст 1 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Василенко Тетяна" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Василенко Тетяна</h4>
+        <p class="text-secondary">Практикуючий психолог</p>
+      </div>
+
+      <!-- Спеціаліст 2 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Сертифікований гештальт терапевт" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Гулей Тетяна</h4>
+        <p class="text-secondary">Сертифікований гештальт терапевт</p>
+      </div>
+
+      <!-- Спеціаліст 3 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Оксана Моргоч" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Оксана Моргоч</h4>
+        <p class="text-secondary">Практичний психолог в гештальт підході</p>
+      </div>
+
+      <!-- Спеціаліст 4 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="Віталія Калин" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Віталія Калин</h4>
+        <p class="text-secondary">Арт, гештальт-терапевт</p>
+      </div>
+
+      <!-- Спеціаліст 5 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/5.jpg') }}" alt="Глушко Олена" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Глушко Олена</h4>
+        <p class="text-secondary">Психолог консультант</p>
+      </div>
+
+      <!-- Спеціаліст 6 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/6.jpg') }}" alt="Кривонос Тетяна" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Кривонос Тетяна</h4>
+        <p class="text-secondary">Практикуючий психолог</p>
+      </div>
+
+      <!-- Спеціаліст 7 -->
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/7.jpg') }}" alt="Євгенія Овсюхно" class="img-fluid mb-3" width="150">
+        <h4 class="fw-bold">Євгенія Овсюхно</h4>
+        <p class="text-secondary">Психолог в гештальт підході</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
